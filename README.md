@@ -2,6 +2,6 @@
 
 ## Working
 
-- [work cv] (./work)
-- [educational] (./educational)
+- [work-cv](./work)
+- [educational](./educational)
   
