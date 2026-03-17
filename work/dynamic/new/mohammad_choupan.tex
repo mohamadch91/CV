@@ -1,0 +1,181 @@
+\documentclass[11pt,a4paper,sans]{moderncv}
+% Possible options include font size ('10pt', '11pt' and '12pt'), paper size ('a4paper', 'letterpaper', 'a5paper', 'legalpaper', 'executivepaper' and 'landscape'), and font family ('sans' and 'roman')
+
+%----------------------------------------------------------------------------------------
+% COLORS
+%----------------------------------------------------------------------
+\usepackage{xcolor}
+% \usepackage{titlesec}/
+% Main color
+% \definecolor{maincol}{RGB}{255,150,0}
+% \titlespacing{\section}{0pt}{\parskip}{-\parskip}
+% Secondary colors
+% \definecolor{secondcol}{RGB}{0,178,255}
+\definecolor{thirdcol}{HTML}{3873B2}
+% \definecolor{fourthcol}{RGB}{0,100,160}
+% \definecolor{fifthcol}{RGB}{0,120,200}
+% \definecolor{sixthcol}{RGB}{0,80,130}
+\definecolor{color1}{HTML}{3873B2}
+% Background color
+% \definecolor{bgcol}{RGB}{255,255,255}
+
+% Text color
+% \definecolor{textcol}{RGB}{0,50,80}
+
+% Section color
+% \definecolor{sectcol}{RGB}{56,115,178}
+
+\usepackage{mathpazo}
+\usepackage{tikz}
+\usetikzlibrary{arrows}
+
+% Moderncv themes
+\moderncvstyle{banking} % Style options are 'casual' (default), 'classic', 'oldstyle' and 'banking'
+\moderncvcolor{blue} % Color options 'blue' (default), 'orange', 'green', 'red', 'purple', 'grey', and 'black'
+%\renewcommand{\familydefault}{\sfdefault} % To set the default font; use '\sfdefault' for the default sans-serif font, '\rmdefault' for the default roman one, or any TeX font name
+\nopagenumbers{} % Uncomment to suppress automatic page numbering for CVs longer than one page
+
+% Character encoding
+\usepackage[utf8]{inputenc}
+\usepackage{pdfpages}
+
+% If you are not using xelatex or lualatex, replace with the encoding you are using
+%\usepackage{CJKutf8} % If you need to use CJK to typeset your resume in Chinese, Japanese, or Korean
+\usepackage{multicol}
+
+% Adjust the page margins
+\usepackage[scale=0.8,top=0.5cm,bottom=0.1cm]{geometry}
+% \usepackage[scale=0.75]{geometry}
+%\setlength{\hintscolumnwidth}{3cm} % If you want to change the width of the column with the dates
+%\setlength{\makecvtitlenamewidth}{10cm} % For the 'classic' style, if you want to force the width allocated to your name and avoid line breaks. Be careful though, the length is normally calculated to avoid any overlap with your personal info; use this at your own typographical risks...
+\usepackage{xpatch}
+\xpatchcmd\cventry{,}{}{}{}
+\makeatletter
+\xpatchcmd\makehead
+   {\titlestyle{~|~\@title}}%
+   {\newline\newline\titlestyle{\@title}
+   }%
+   {}{}
+\makeatother
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor=magenta,
+    urlcolor=thirdcol,
+}
+
+
+\vspace{7mm}
+% Personal data
+
+\name{}{\hspace{10mm}\textcolor{black}{Mohammad Choupan}}
+\title{Software Engineer} % Optional, remove/comment the line if not wanted
+
+% \name{\textcolor{black}{Mohammad}}{\textcolor{black}{Choupan}}
+
+
+% \address{70 Absolute Ave.}{L4Z 0A4 Mississauga}{Canada} % Optional, remove/comment the line if not wanted; the "postcode city" and "country" arguments can be omitted or provided empty
+% \vspace*{7mm}
+% \address % \address{pariyamd.github.io}
+\phone[mobile]{+39 3520 119 670}
+% \title{\normalfont}
+% Optional, remove/comment the line if not wanted
+% \phone[fixed]{+2~(345)~678~901} % Optional, remove/comment the line if not wanted
+% \phone[fax]{+3~(456)~789~012} % Optional, remove/comment the line if not wanted
+\email{mohamadchoupan80@gmail.com}
+% Optional, remove/comment the line if not needed
+\social[github]{mohamadch91}
+% \social[linkedin]{mohammad-choupan-629959245}
+% \photo[80pt][0.1pt]{pariya.png} % \date{2000-07-18}
+%----------------------------------------------------------------------------------
+% Content
+%----------------------------------------------------------------------------------
+
+\begin{document}
+% \vspace {0mm}
+\makecvtitle
+
+\vspace {-2em}
+
+\section{Profile}
+\vspace{-1mm}
+MSc student in Artificial Intelligence at the University of Bologna and Software Engineer with 2+ years of experience building scalable data pipelines, ML-driven services, and reliable microservices. Passionate about writing clean, maintainable Python code and working with cross-functional teams in an Agile setting. Fast learner eager to shape the future of tech.
+
+\section{Technical Skills}
+\begin{itemize}
+    \item \textbf{Languages:} Python, SQL, Bash
+    \item \textbf{Machine Learning:} PyTorch, Pandas, Scikit-learn, MLflow, Transformers
+    \item \textbf{Data \& Pipelines:} Apache Spark, Airflow, PostgreSQL, MySQL
+    \item \textbf{Back-End Services:} Django, Django REST Framework (DRF), REST APIs, Celery, gRPC
+    \item \textbf{DevOps \& Operations:} Docker, Kubernetes, GitOps, CI/CD (GitHub Actions, Jenkins)
+\end{itemize}
+
+\section{Work Experience}
+\vspace{1mm}
+
+\cventry{2025 -- 2026}{ML Engineer}{Behavior Understanding Project}{Tehran, Iran}{}{
+\vspace{1mm}
+Behavior Understanding focuses on decoding governments' behavior from news and social media.
+\begin{itemize}
+\item Built and deployed ML-driven services: fine-tuned a pre-trained LLM and served a chatbot interface to answer questions about government trends.
+\item Developed scalable data pipelines to ingest, transform, and serve high-quality content from news and social platforms.
+\item Experimented continuously by analyzing user feedback and refining models, improving accuracy by 20\%.
+\end{itemize}}
+\vspace{1mm}
+
+\cventry{2024 -- 2025}{Software Engineer}{OpenSecurity (OpenGovern)}{Remote}{}{
+\vspace{1mm}
+OpenSecurity is an open-source startup building a compliance and security platform for containerized environments. \href{https://github.com/opengovern/}{GitHub}
+\begin{itemize}
+\item Built and maintained Python microservices and created an AI/LLM pipeline to serve product automation (prompt orchestration, tool execution).
+\item Explored and ingested data by enabling offline SQL queries on cached datasets (500+ tables), empowering analysis in restricted networks.
+\item Participated in the full engineering lifecycle, enforcing Kubernetes releases via Helm and accelerating setup time under 2 minutes.
+\item Wrote clean, maintainable code alongside distributed engineers and contributed directly to an open-source release with 600+ stars.
+\end{itemize}}
+\vspace{1mm}
+
+\cventry{2024 -- 2025}{ML Engineer \& Data Pipelines}{Profile Mapping}{Tehran, Iran}{}{
+\vspace{1mm}
+Profile Mapping aggregates profiles across platforms for unified user representations.
+\begin{itemize}
+\item Helped design and maintain data pipelines integrating information from social media, e-commerce, and online forums.
+\item Developed ML models and NLP techniques to extract meaningful patterns from user-generated content for personalized recommendations.
+\item Monitored and evaluated models in production using precision, recall, and F1-scores.
+\end{itemize}}
+\vspace{1mm}
+
+
+\cventry{2023 -- 2024}{Software Engineer}{INVGAP (Inventory \& Gap Analysis, WHO)}{Remote}{}{
+\vspace{1mm}
+INVGAP tracks vaccine inventory across multiple countries.
+\begin{itemize}
+\item Developed the core back-end data model (Django) with \textbf{40+ active tables} capturing complex mapping logic.
+\item Ingested large Excel datasets up to 30\,MB using safe batch processing and rigorous data validation.
+\item Built reliable REST APIs to serve data to the dashboard, ensuring high uptime for \textbf{1000+ users}.
+\end{itemize}}
+
+\newpage
+\clearpage
+
+\section{Education}
+
+\cventry{2025 -- Present}{MSc in Artificial Intelligence}{University of Bologna, Italy}{}{}{
+\begin{itemize}
+    \item GPA: 30/30
+\end{itemize}}
+
+\cventry{2020 -- 2024}{Bachelor's Degree in Computer Engineering}{Amirkabir University of Technology}{Tehran, Iran}{}{\begin{itemize}
+    \item GPA: 3.7/4
+\end{itemize}}
+
+\vspace*{1em}
+
+
+\vspace*{1em}
+
+\begin{center}
+References, further information, and proofs are available upon request
+\end{center}
+
+\end{document}
