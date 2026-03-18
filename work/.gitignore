@@ -1,2 +1,4 @@
 /dynamic
 /dynammic/*.pdf
+*.DS_Store
+.DS_Store
